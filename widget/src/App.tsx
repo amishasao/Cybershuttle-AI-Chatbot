@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Chatbox from './components/Chatbox';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div
+  style={{
+    height: '100vh',
+    backgroundColor: '#f5f5f5',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '20px',
+    textAlign: 'center', // optional for centering heading text
+  }}
+  >
+    <h1>What can I do for your research?</h1>
+    <Chatbox />
+  </div>
   );
-}
+};
 
 export default App;
