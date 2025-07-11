@@ -26,7 +26,7 @@ async def main():
     client = MCPClient.from_dict(config)
 
     # Use Ollama with a local model (make sure it's already running via `ollama run llama3`)
-    llm = Ollama(model="tinyllama")
+    llm = Ollama(model="qwen-4b", temperature=0.1, max_tokens=1000)
 
     # Create MCP Agent
     agent = MCPAgent(llm=llm, client=client, max_steps=30)
